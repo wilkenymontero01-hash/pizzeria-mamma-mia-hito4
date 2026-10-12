@@ -1,16 +1,23 @@
-import React from "react";
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Cart from "./components/Cart";
+import Navbar from "./components/Navbar";
+import Pizza from "./components/Pizza";
+// import Cart from "./components/Cart";
+// import Home from "./components/Home";
+// import LoginPage from "./components/Login";
+// import RegisterPage from "./components/Register";
 
-function App() {
-  return React.createElement(
-    "div",
-    { className: "d-flex flex-column min-vh-100" },
-    React.createElement(Navbar, null),
-    React.createElement(Cart, null),
-    React.createElement(Footer, null)
+const App = () => {
+  return (
+    <div>
+      <Navbar />
+      {/* <Home /> */}
+      {/* <RegisterPage /> */}
+      {/* <LoginPage /> */}
+      {/* <Cart /> */}
+      <Pizza />
+      <Footer />
+    </div>
   );
-}
+};
 
 export default App;

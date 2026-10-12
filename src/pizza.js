@@ -4,7 +4,7 @@ export const pizzas = [
     name: "Napolitana",
     price: 5950,
     ingredients: ["mozzarella", "tomates", "jamón", "orégano"],
-    img: "https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-1239077_640_cl.jpg?alt=media&token=72a0d02f-59c5-459e-bc5d-592882195022"
+    img: "https://plus.unsplash.com/premium_photo-1673439304183-8840bd0dc1bf?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
   },
   {
     id: "p002",

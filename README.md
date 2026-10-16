@@ -1,16 +1,44 @@
-# React + Vite
+# 🍕 Pizzería Mamma Mía! - Hito 5
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto corresponde al **Hito 5** del desarrollo web con React, enfocado en la implementación de un sistema de enrutamiento dinámico utilizando **React Router**.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías utilizadas
+* **React** (Biblioteca de JavaScript)
+* **Vite** (Entorno de desarrollo rápido)
+* **React Router DOM** (Manejo de rutas y navegación)
+* **Bootstrap / React Bootstrap** (Diseño y componentes estilizados)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📋 Requerimientos implementados (Hito 5)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Configuración de React Router**: Instalación y configuración de `BrowserRouter` en el punto de entrada de la aplicación (`main.jsx`).
+2. **Estructura de Páginas**: Organización de los componentes principales dentro de la carpeta `src/pages/`:
+   * `Home.jsx`
+   * `Register.jsx`
+   * `Login.jsx`
+   * `Cart.jsx`
+   * `Pizza.jsx`
+   * `Profile.jsx`
+   * `NotFound.jsx`
+3. **Definición de Rutas (`App.jsx`)**:
+   * `/` ➔ Muestra el componente **Home**
+   * `/register` ➔ Muestra el componente **Register**
+   * `/login` ➔ Muestra el componente **Login**
+   * `/cart` ➔ Muestra el componente **Cart**
+   * `/pizza/p001` ➔ Muestra el componente **Pizza**
+   * `/profile` ➔ Muestra el componente **Profile**
+   * `*` (Comodín) ➔ Muestra el componente **NotFound** para rutas inexistentes.
+4. **Componente NotFound (404)**: Vista personalizada con un diseño limpio y un botón/enlace de redirección de regreso al inicio (`/`).
+5. **Componente Profile**: Vista que muestra un correo electrónico de usuario estático y un botón para cerrar sesión.
+6. **Navbar Interactivo**: Barra de navegación adaptada con componentes `Link` de React Router y un botón de acceso directo al carrito (`/cart`).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Instalación y Ejecución Local
+
+Sigue estos pasos para clonar y ejecutar el proyecto en tu máquina local:
+
+1. **Clona este repositorio:**
+   ```bash
+   git clone [https://github.com/tu-usuario/pizzeria-mamma-mia-hito5.git](https://github.com/tu-usuario/pizzeria-mamma-mia-hito5.git)

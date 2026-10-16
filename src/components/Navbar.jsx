@@ -1,29 +1,42 @@
+
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Navbar as BootstrapNavbar, Nav, Container, Button } from 'react-bootstrap'
+
 const Navbar = () => {
-  const total = 25000;
-  const token = false;
+  const token = false; 
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4 text-white">
-      <span className="navbar-brand me-auto">Pizzería Mamma Mia!</span>
-      <div className="d-flex gap-2">
-        <button className="btn btn-outline-light btn-sm">🍕 Home</button>
-        {token ? (
-          <>
-            <button className="btn btn-outline-light btn-sm">🔓 Profile</button>
-            <button className="btn btn-outline-light btn-sm">🔒 Logout</button>
-          </>
-        ) : (
-          <>
-            <button className="btn btn-outline-light btn-sm">🔐 Login</button>
-            <button className="btn btn-outline-light btn-sm">🔐 Register</button>
-          </>
-        )}
-      </div>
-      <button className="btn btn-outline-info btn-sm ms-auto">
-        🛒 Total: ${total.toLocaleString("es-CL")}
-      </button>
-    </nav>
-  );
-};
+    <BootstrapNavbar bg="dark" variant="dark" expand="lg" className="px-4">
+      <Container fluid>
+        <BootstrapNavbar.Brand as={Link} to="/">Pizzería Mamma Mía!</BootstrapNavbar.Brand>
+        <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+        <BootstrapNavbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Link to="/" className="btn btn-outline-light btn-sm me-2 mb-1 mb-lg-0">🍕 Home</Link>
+            {token ? (
+              <>
+                <Link to="/profile" className="btn btn-outline-light btn-sm me-2 mb-1 mb-lg-0">🔓 Profile</Link>
+                <Button variant="outline-light" size="sm" className="me-2 mb-1 mb-lg-0">🔒 Logout</Button>
+              </>
+            ) : (
+              <>
+                <Link to="/login" className="btn btn-outline-light btn-sm me-2 mb-1 mb-lg-0">🔐 Login</Link>
+                <Link to="/register" className="btn btn-outline-light btn-sm me-2 mb-1 mb-lg-0">🔐 Register</Link>
+              </>
+            )}
+          </Nav>
+          <Nav>
+            <Link to="/cart">
+              <Button variant="outline-info" size="sm">
+                🛒 Total: $25.000
+              </Button>
+            </Link>
+          </Nav>
+        </BootstrapNavbar.Collapse>
+      </Container>
+    </BootstrapNavbar>
+  )
+}
 
-export default Navbar;
+export default Navbar
